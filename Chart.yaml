@@ -1,0 +1,23 @@
+apiVersion: v2
+name: vvm-elk
+description: vvm helm chart elk
+appVersion: 1.0.0
+version: 1.0.0
+dependencies:
+- name: elasticsearch
+  condition: elasticsearch.enabled
+  version: 7.12.1
+  repository: https://helm.elastic.co
+- name: kibana
+  condition: kibana.enabled
+  version: 7.12.1
+  repository: https://helm.elastic.co
+- name: logstash
+  condition: logstash.enabled
+  version: 7.12.1
+  repository: https://helm.elastic.co
+- name: filebeat
+  condition: filebeat.enabled
+  version: 7.12.1
+  repository: https://helm.elastic.co
+
