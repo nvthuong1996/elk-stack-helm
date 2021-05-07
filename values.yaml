@@ -15,8 +15,8 @@ elasticsearch:
       # discovery.type: single-node
     - name: discovery.type
       value: single-node
-    # - name: cluster.initial_master_nodes
-    #   value: "null"
+    - name: cluster.initial_master_nodes
+      value: "null"
     - name: ELASTIC_PASSWORD
       valueFrom:
         secretKeyRef:
